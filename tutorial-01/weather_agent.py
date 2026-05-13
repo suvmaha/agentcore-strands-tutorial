@@ -9,7 +9,10 @@ Run on AI Dev Server (Bedrock via IAM role — no API keys needed):
 from strands import Agent
 from strands_tools import http_request
 
-agent = Agent(tools=[http_request])
+agent = Agent(
+    model="us.anthropic.claude-sonnet-4-5-20251001",
+    tools=[http_request],
+)
 
 # Single-hop: one API call
 print("=" * 60)
